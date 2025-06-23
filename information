@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura: 家庭AI健康评估终端 - 技术信息图</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Palette: Brilliant Blues -->
+    <!-- NEITHER Mermaid JS NOR SVG were used in this document. -->
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 45vh;
+        }
+        .flow-chart-node {
+            border: 2px solid #0077B6;
+            background-color: #CAF0F8;
+            color: #004E89;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .flow-chart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0077B6;
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 0 0.5rem;
+        }
+        .security-layer {
+            position: relative;
+            border: 2px solid;
+            border-radius: 0.75rem;
+            padding: 2.5rem 1.5rem 1.5rem;
+            margin-bottom: -1.5rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .security-layer-title {
+            position: absolute;
+            top: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #FFFFFF;
+            padding: 0 0.5rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold text-[#004E89]">Aura</h1>
+            <p class="mt-4 text-xl md:text-2xl text-[#0077B6] max-w-3xl mx-auto">重新定义家庭健康：从被动监测到主动式预测智能</p>
+        </header>
+
+        <!-- Three Pillars Section -->
+        <section class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-5xl mb-4 text-[#0077B6]">🛡️</div>
+                    <h3 class="text-2xl font-bold text-[#004E89] mb-2">隐私优先设计</h3>
+                    <p class="text-gray-600">所有健康数据均在设备本地处理，永远不会上传云端。您的隐私，是我们的最高承诺。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-5xl mb-4 text-[#0077B6]">⚡️</div>
+                    <h3 class="text-2xl font-bold text-[#004E89] mb-2">实时健康洞察</h3>
+                    <p class="text-gray-600">凭借强大的边缘AI性能，即时分析健康数据，提供零延迟的反馈与预警。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-5xl mb-4 text-[#0077B6]">🧩</div>
+                    <h3 class="text-2xl font-bold text-[#004E89] mb-2">原生模块化架构</h3>
+                    <p class="text-gray-600">软硬件均可扩展，轻松集成新传感器或升级AI模型，确保您的设备永不过时。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Hardware Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#004E89]">驱动本地智能的强大核心</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">我们选用顶级的边缘计算平台，确保所有分析都在您的家中私密、高效地完成。</p>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#004E89] mb-4">瑞芯微 RK3588 SoC：性能概览</h3>
+                        <p class="text-gray-600 mb-4">RK3588以其在高性能计算、AI加速和功耗效率间的卓越平衡，为Aura提供了坚实的基础。其强大的多媒体能力，特别是8K视频输出，是实现大屏健康仪表盘功能的关键。</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-center"><span class="text-[#0077B6] font-bold mr-2 text-xl">✓</span> 8核ARM CPU架构</li>
+                            <li class="flex items-center"><span class="text-[#0077B6] font-bold mr-2 text-xl">✓</span> 6.0 TOPS 算力NPU</li>
+                            <li class="flex items-center"><span class="text-[#0077B6] font-bold mr-2 text-xl">✓</span> 8K@60Hz 视频解码与输出</li>
+                        </ul>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="socChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Fusion Flow Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#004E89]">多模态数据融合框架</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Aura 如同经验丰富的侦探，从不依赖单一线索。它整合多维数据，描绘出一幅完整的健康图景。</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flex flex-col space-y-4">
+                        <div class="flow-chart-node">生理数据<br>(心率, 血压, 血糖)</div>
+                        <div class="flow-chart-node">行为数据<br>(运动, 睡眠, 姿态)</div>
+                        <div class="flow-chart-node">环境数据<br>(温度, 湿度, 空气质量)</div>
+                    </div>
+                    <div class="flow-chart-arrow transform md:-rotate-90">➔</div>
+                    <div class="flow-chart-node bg-[#0077B6] text-white">
+                        <h4 class="font-bold text-lg">Aura AI 引擎</h4>
+                        <p>(本地化AI模型)</p>
+                    </div>
+                    <div class="flow-chart-arrow transform md:-rotate-90">➔</div>
+                     <div class="flow-chart-node text-left">
+                        <h4 class="font-bold text-lg">可执行的健康洞察</h4>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>个性化建议</li>
+                            <li>异常趋势预警</li>
+                            <li>每日健康评分</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Model Strategy -->
+        <section class="mb-20">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#004E89]">分层式AI模型策略</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">我们提供灵活的AI模型部署方案，以平衡性能、成本与未来需求。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-[#0077B6]">
+                    <h3 class="text-2xl font-bold text-[#004E89] mb-3">基础模型：10亿参数</h3>
+                    <p class="text-gray-600 mb-4">标配模型，足以胜任每日健康评估、数据总结和日常建议。优势在于内存占用小，响应速度极快。</p>
+                    <div class="bg-[#CAF0F8] text-[#004E89] p-4 rounded-lg">
+                        <p class="font-semibold">适用场景：</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>即时健康问答</li>
+                            <li>睡眠质量分析</li>
+                            <li>日常活动建议</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-[#004E89] mb-3">可选升级：20亿+参数</h3>
+                    <p class="text-gray-600 mb-4">为需要深度分析的用户准备。能够进行更复杂的计算，识别长期健康数据中的微弱信号。</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <p class="font-semibold text-gray-700">适用场景：</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-600">
+                            <li>慢性病风险趋势预测</li>
+                            <li>复杂的因果关系推断</li>
+                            <li>个性化行为建模</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Security Section -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#004E89]">零信任安全架构</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">我们采用多层次、纵深防御的安全架构，确保您的数据在每个环节都得到最高级别的保护。</p>
+            </div>
+            <div class="max-w-md mx-auto">
+                <div class="security-layer border-[#004E89] bg-[#004E89] text-white">
+                    <div class="security-layer-title text-[#004E89]">应用层</div>
+                    <p class="text-center">安全的OTA更新 & gRPC加密通信 (TLS 1.3)</p>
+                    <div class="security-layer border-[#0077B6] bg-[#0077B6]">
+                         <div class="security-layer-title text-[#0077B6]">系统层</div>
+                         <p class="text-center">本地数据磁盘加密 (AES-256)</p>
+                        <div class="security-layer border-[#90E0EF] bg-[#90E0EF]">
+                            <div class="security-layer-title text-[#004E89]">硬件层</div>
+                            <p class="text-center text-gray-800">ARM TrustZone 安全区 & 安全启动</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Health Insights Section -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#004E89]">从数据到可执行的健康洞察</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Aura不仅呈现数据，更通过纵向趋势分析，帮助您将洞察转化为行动。</p>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="chart-container">
+                        <canvas id="healthTrendChart"></canvas>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#004E89] mb-4">纵向健康趋势分析</h3>
+                        <p class="text-gray-600 mb-4">这是Aura的颠覆性力量所在。本地AI模型能分析数周乃至数月的历史数据，识别出您健康状况与个人基线的微小但有意义的偏离。</p>
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-[#0077B6]">
+                            <p class="font-semibold text-[#004E89]">AI洞察示例：</p>
+                            <p class="text-gray-700 mt-2">“系统注意到，您近期的静息心率略有升高，同时深度睡眠时间有所减少。建议您关注近期的压力水平或考虑增加放松性活动。”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center p-6 bg-gray-100 mt-12">
+        <p class="text-gray-600">Aura - 更智能的关爱，更健康的家。</p>
+    </footer>
+
+    <script>
+        const chartTooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const wrapLabel = (label) => {
+            if (label.length > 16) {
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > 16) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            }
+            return label;
+        };
+        
+        const palette = {
+            darkBlue: '#004E89',
+            mediumBlue: '#0077B6',
+            lightBlue: '#90E0EF',
+            veryLightBlue: '#CAF0F8',
+            white: '#FFFFFF'
+        };
+
+        // SoC Chart
+        const socCtx = document.getElementById('socChart').getContext('2d');
+        const socLabels = ['8核 CPU', '6.0 TOPS NPU', '8GB LPDDR5 RAM', ['8K@60Hz', '视频输出']].map(l => Array.isArray(l) ? l : wrapLabel(l));
+        new Chart(socCtx, {
+            type: 'bar',
+            data: {
+                labels: socLabels,
+                datasets: [{
+                    label: '核心性能指标',
+                    data: [8, 6, 8, 8], 
+                    backgroundColor: [palette.mediumBlue, palette.darkBlue, palette.mediumBlue, palette.darkBlue],
+                    borderColor: palette.darkBlue,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...chartTooltipCallback,
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '规格/单位'
+                        }
+                    }
+                },
+                plugins: {
+                    ...chartTooltipCallback.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Health Trend Chart
+        const healthTrendCtx = document.getElementById('healthTrendChart').getContext('2d');
+        new Chart(healthTrendCtx, {
+            type: 'line',
+            data: {
+                labels: ['第一周', '第二周', '第三周', '第四周', '第五周', '第六周', '第七周'],
+                datasets: [{
+                    label: '睡眠分数',
+                    data: [85, 88, 82, 79, 83, 85, 88],
+                    borderColor: palette.darkBlue,
+                    backgroundColor: 'rgba(0, 78, 137, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: '准备度分数',
+                    data: [90, 92, 85, 83, 88, 91, 93],
+                    borderColor: palette.mediumBlue,
+                    backgroundColor: 'rgba(0, 119, 182, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...chartTooltipCallback,
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 60,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: '分数 (0-100)'
+                        }
+                    }
+                },
+                 plugins: {
+                    ...chartTooltipCallback.plugins,
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
