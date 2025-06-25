@@ -1,352 +1,352 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>“哨兵计划”：AI BOX 美国市场进入策略信息图</title>
+    <title>AI家庭健康中枢 - 您的私人健康管家</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
         }
         .chart-container {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            height: 300px;
+            height: 350px;
             max-height: 40vh;
         }
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .chart-container {
-                height: 350px;
+                height: 300px;
+                max-height: 50vh;
             }
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #0d324d 0%, #7f5a83 100%);
+        .gradient-text {
+            background: linear-gradient(to right, #005C97, #363795);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .card {
-            background-color: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-content {
+            flex-grow: 1;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .spec-table th, .spec-table td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .spec-table th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #005C97;
+            width: 30%;
         }
     </style>
 </head>
-<body class="gradient-bg text-white">
+<body class="text-gray-800">
 
     <div class="container mx-auto p-4 md:p-8">
 
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400">“哨兵计划”</h1>
-            <p class="text-xl md:text-2xl text-gray-300">AI BOX 美国市场进入策略</p>
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold gradient-text mb-4">开启您的主动式健康生活</h1>
+            <h2 class="text-2xl md:text-3xl font-light text-gray-600">AI家庭健康中枢：您的私人健康管家</h2>
+            <p class="max-w-3xl mx-auto mt-4 text-gray-500">
+                将您家中的电视，升级为关爱全家人的智能健康中心。它默默守护，主动分析，用看得懂的方式，呈现您和家人的健康趋势。
+            </p>
         </header>
 
-        <section id="opportunity" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">一个不可逆转的万亿级市场机遇</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div class="card p-6 rounded-xl">
-                    <p class="text-5xl font-bold text-purple-400">$1 Trillion+</p>
-                    <p class="mt-2 text-gray-300">相关市场总规模 (TAM)</p>
+        <section id="scene" class="mb-20">
+            <h3 class="text-3xl font-bold text-center mb-10 text-[#005C97]">一个温馨的日常场景</h3>
+            <div class="card p-4 md:p-8">
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-inner">
+                    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI家庭健康中枢在客厅的应用场景" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/e9ecef/6c757d?text=温馨客厅场景';">
                 </div>
-                <div class="card p-6 rounded-xl">
-                    <p class="text-5xl font-bold text-purple-400">76%</p>
-                    <p class="mt-2 text-gray-300">美国成年人至少患有一种慢性病</p>
-                </div>
-                <div class="card p-6 rounded-xl">
-                    <p class="text-5xl font-bold text-purple-400">$79亿</p>
-                    <p class="mt-2 text-gray-300">远程患者监控 (RPM) 可服务市场 (SAM)</p>
+                <div class="mt-8 text-center text-gray-700">
+                     <p class="text-lg leading-relaxed">上图描绘了一个典型的应用场景：当您与家人享受温馨的客厅时光，AI健康中枢已将电视变成一个环境化的健康信息中心。它将关键的健康摘要（如睡眠质量、活动达标情况）以最不打扰的方式展示在屏幕一角，让全家人都能自然地了解彼此的健康状况。同时，您可以通过手机App随时查看更详细的报告，比如父母的血压趋势或孩子的睡眠周期。它不是一个需要您刻意交互的冰冷设备，而是一个安静、智能的守护者，让关爱无缝融入家的每一个角落。</p>
                 </div>
             </div>
         </section>
 
-        <section id="solution" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">我们的解决方案：AI BOX - 重新定义家庭健康</h2>
-             <div class="card p-6 rounded-xl text-center mb-8">
-                <p class="text-lg text-gray-200">市场缺少一个能融合消费级体验、临床级分析和银行级隐私安全保障的平台。AI BOX正是为填补这一价值真空而生。</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="text-5xl mb-4">🔗</div>
-                    <h3 class="text-xl font-bold mb-2">深度数据融合</h3>
-                    <p class="text-gray-300">业界首个能将穿戴设备动态数据与医院PDF报告静态数据在本地进行AI综合分析的平台。</p>
-                </div>
-                <div class="card p-6 rounded-xl text-center">
+        <section id="benefits" class="mb-20">
+            <h3 class="text-3xl font-bold text-center mb-10 text-[#005C97]">一位真正懂您的健康伙伴</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card text-center">
                     <div class="text-5xl mb-4">🛡️</div>
-                    <h3 class="text-xl font-bold mb-2">极致隐私安全</h3>
-                    <p class="text-gray-300">专利的边缘计算架构，数据在本地处理，无需上传云端，从根源上杜绝隐私泄露风险。</p>
-                </div>
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="text-5xl mb-4">💰</div>
-                    <h3 class="text-xl font-bold mb-2">精巧商业模式</h3>
-                    <p class="text-gray-300">对接医保(RPM)报销，将AI BOX从“成本”变为诊所的“利润中心”，化医疗机构为强大销售渠道。</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="competitive-landscape" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">竞争格局：一场非对称战争</h2>
-            <div class="card p-6 rounded-xl">
-                <p class="text-center mb-6 text-gray-300">我们不与巨头在红海中正面竞争，而是在他们无法触及的、由技术和商业模式构筑的蓝海中开创全新象限。</p>
-                <div class="w-full max-w-2xl mx-auto">
-                    <div class="grid grid-cols-2 grid-rows-2 gap-1 border border-gray-600 rounded-lg">
-                        <div class="p-4 border-r border-b border-gray-600">
-                            <h4 class="font-bold text-purple-400">软件/服务 + B2B</h4>
-                            <p class="text-sm text-gray-400">Teladoc, Amwell</p>
-                            <p class="text-xs mt-2 text-gray-300">定位为互补的“基础设施赋能者”。</p>
-                        </div>
-                        <div class="p-4 border-b border-gray-600">
-                            <h4 class="font-bold text-purple-400">消费硬件 + D2C</h4>
-                            <p class="text-sm text-gray-400">Apple, Google/Fitbit</p>
-                            <p class="text-xs mt-2 text-gray-300">我们占领“客厅”，聚焦临床数据整合与隐私。</p>
-                        </div>
-                        <div class="p-4 border-r border-gray-600">
-                            <h4 class="font-bold text-red-500 bg-purple-200 bg-opacity-20 p-2 rounded-md">平台硬件 + B2B2C (我们的蓝海)</h4>
-                            <p class="text-sm text-gray-400">AI BOX</p>
-                             <p class="text-xs mt-2 text-gray-300">唯一提供隐私安全硬件平台，并通过医保报销触达用户的玩家。</p>
-                        </div>
-                        <div class="p-4">
-                            <h4 class="font-bold text-purple-400">医疗硬件 + D2C</h4>
-                            <p class="text-sm text-gray-400">Withings</p>
-                            <p class="text-xs mt-2 text-gray-300">我们提供“整合平台”，而非“单一产品集合”。</p>
-                        </div>
+                    <div class="card-content">
+                        <h4 class="text-xl font-bold text-[#005C97] mb-2">您的健康，只属于您</h4>
+                        <p class="text-gray-600">所有敏感数据都在您家中的设备里进行本地化处理，绝不上传云端。这意味着没有任何人，包括我们，可以访问您的隐私。我们用银行级的安全标准，守护您最珍贵的健康信息。</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="gtm" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">进入市场(GTM)战略：务实的“两级火箭”</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-                <div class="card p-6 rounded-xl w-full md:w-1/2 text-center">
+                <div class="card text-center">
+                    <div class="text-5xl mb-4">❤️‍🩹</div>
+                    <div class="card-content">
+                        <h4 class="text-xl font-bold text-[#005C97] mb-2">即时反馈，时刻关心</h4>
+                        <p class="text-gray-600">无论是运动后心率的恢复速度，还是夜间睡眠的辗转反侧，AI都能即时分析并给出反馈。它就像一位24小时待命的家庭医生，时刻关注您的点滴变化，让您对自己的身体了如指掌。</p>
+                    </div>
+                </div>
+                <div class="card text-center">
                     <div class="text-5xl mb-4">🚀</div>
-                    <h3 class="text-xl font-bold mb-2">第一级：B计划 - 消费级先行</h3>
-                    <p class="text-gray-300">利用“新加坡制造”的信任和零关税优势，以D2C模式快速验证市场、积累数据、建立品牌，并为第二级点火积蓄燃料。</p>
-                    <ul class="text-left mt-4 space-y-2 text-gray-400">
-                        <li>▶️ 目标: 快速验证市场，最小化初始投入</li>
-                        <li>▶️ 模式: D2C, $199硬件 + 订阅</li>
-                        <li>▶️ 优势: 快速上市, 低成本, 建立现金流</li>
-                    </ul>
-                </div>
-                
-                <div class="text-5xl text-purple-400 hidden md:block animate-pulse">→</div>
-                 <div class="text-5xl text-purple-400 md:hidden animate-pulse">↓</div>
-
-                <div class="card p-6 rounded-xl w-full md:w-1/2 text-center">
-                    <div class="text-5xl mb-4">🛰️</div>
-                    <h3 class="text-xl font-bold mb-2">第二级：A计划 - 医疗级升级</h3>
-                    <p class="text-gray-300">在第一级成功基础上，完成FDA审批，转向高价值的B2B2C模式，通过RPM报销实现指数级增长，进入最终轨道。</p>
-                    <ul class="text-left mt-4 space-y-2 text-gray-400">
-                        <li>▶️ 目标: 规模化扩张, 实现价值最大化</li>
-                        <li>▶️ 模式: B2B2C, 收入分成 (30%)</li>
-                        <li>▶️ 优势: 高利润, 高壁垒, 深度客户绑定</li>
-                    </ul>
+                    <div class="card-content">
+                        <h4 class="text-xl font-bold text-[#005C97] mb-2">一次投入，持续升级</h4>
+                        <p class="text-gray-600">这不仅是一个硬件，更是一个不断进化的健康服务平台。我们的AI算法和功能会通过网络定期免费更新。一次选择，就能享受不断变强的健康守护服务，常用常新。</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="financials" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">财务潜力：清晰的盈利路径</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="card p-6 rounded-xl flex flex-col justify-center">
-                    <h3 class="text-xl font-bold text-center mb-4">五年收入预测 (B2B2C模式)</h3>
-                    <div class="chart-container h-64 md:h-80">
-                        <canvas id="revenueChart"></canvas>
-                    </div>
-                    <p class="text-center text-sm mt-4 text-gray-400">模型显示，在第5年盈利能力将迎来拐点，得益于高利润、高粘性的经常性收入(ARR)规模化。</p>
+        <section id="for-family" class="mb-20">
+            <h3 class="text-3xl font-bold text-center mb-10 text-[#005C97]">为您的整个家庭而设计</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="text-4xl mb-4">👴👵</div>
+                    <h4 class="text-xl font-bold text-[#005C97] mb-2">关爱长辈</h4>
+                    <p class="text-gray-600">为父母设置，主动监测**血压、心率、血氧**等关键指标的长期变化，结合对化验单中**血脂、血糖**数据的分析，对潜在的“三高”风险进行预警。即使您不在身边，也能远程了解他们的健康状况，让关爱没有距离。</p>
                 </div>
-                <div class="card p-6 rounded-xl flex flex-col justify-center items-center text-center">
-                     <h3 class="text-xl font-bold mb-4">为诊所创造的价值</h3>
-                    <div class="text-6xl font-bold text-purple-400 mb-2">$75.6K+</div>
-                    <p class="text-lg text-gray-300 mb-6">单个诊所部署100名患者后的<br>年化净利润增长</p>
-                    <div class="w-full max-w-xs">
-                         <div class="chart-container h-48">
-                            <canvas id="clinicRoiChart"></canvas>
+                <div class="card">
+                    <div class="text-4xl mb-4">👩‍💼👨‍💻</div>
+                    <h4 class="text-xl font-bold text-[#005C97] mb-2">守护中坚</h4>
+                    <p class="text-gray-600">对于家庭的顶梁柱，它能分析压力水平、睡眠质量和运动量的平衡，结合对**心率、血氧**的持续监测，帮助您更好地管理精力，在快节奏的工作和生活中找到最佳状态，避免健康透支。</p>
+                </div>
+                <div class="card">
+                    <div class="text-4xl mb-4">👧👦</div>
+                    <h4 class="text-xl font-bold text-[#005C97] mb-2">陪伴成长</h4>
+                    <p class="text-gray-600">记录孩子的睡眠模式和每日活动量，通过对夜间**心率**和**血氧**变化的分析，帮助家长更科学地了解其成长发育状况。通过趣味性的目标设定，鼓励孩子养成健康的生活习惯。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="mb-20">
+            <h3 class="text-3xl font-bold text-center mb-10 text-[#005C97]">它是如何工作的？简单三步</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <div class="card">
+                    <h4 class="text-2xl font-bold text-[#005C97] mb-4">1. 全面汇集您的健康数据</h4>
+                    <p class="text-gray-600 mb-4">它能整合来自不同设备和来源的数据，为您描绘一幅完整的健康画像。</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                            <span class="text-2xl mr-4">⌚️</span>
+                            <div><h5 class="font-bold text-[#005C97]">日常动态监测</h5><p class="text-sm text-gray-700">通过智能手表/手环、血压计等，自动同步**心率、血氧、血压**、睡眠和活动数据。</p></div>
+                        </div>
+                        <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                            <span class="text-2xl mr-4">📄</span>
+                            <div><h5 class="font-bold text-[#005C97]">医院报告数字化</h5><p class="text-sm text-gray-700">轻松拍下医院化验单，AI会自动识别**血常规、血脂、血糖**等关键指标并存入档案。</p></div>
+                        </div>
+                         <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                             <span class="text-2xl mr-4">🗣️</span>
+                             <div><h5 class="font-bold text-[#005C97]">语音与手动记录</h5><p class="text-sm text-gray-700">随口问问“我昨晚睡得好吗”，或随手记录心情与饮食。</p></div>
                         </div>
                     </div>
-                    <p class="text-center text-sm mt-4 text-gray-400">AI BOX 不仅提升护理质量，更是强大的收入增长引擎。</p>
+                </div>
+                <div class="card">
+                    <h4 class="text-2xl font-bold text-[#005C97] mb-4">2. AI大脑进行深度分析</h4>
+                    <p class="text-gray-600 mb-4">强大的本地AI引擎，像一位智慧大脑，深度分析所有数据，发现潜在的联系。</p>
+                     <div class="relative p-4">
+                        <div class="flex flex-col items-center space-y-2">
+                            <div class="w-full p-3 bg-blue-200 rounded-lg text-center shadow-sm"><p class="font-semibold text-blue-800">第一步：汇集健康线索</p></div>
+                            <div class="text-2xl text-blue-500">↓</div>
+                            <div class="w-full p-3 bg-blue-300 rounded-lg text-center shadow-sm"><p class="font-semibold text-blue-800">第二步：发现数据间的关联</p></div>
+                            <div class="text-2xl text-blue-500">↓</div>
+                            <div class="w-full p-3 bg-blue-400 rounded-lg text-center shadow-sm"><p class="font-semibold text-white">第三步：评估潜在风险</p></div>
+                            <div class="text-2xl text-blue-500">↓</div>
+                             <div class="w-full p-3 bg-[#005C97] rounded-lg text-center shadow-sm"><p class="font-semibold text-white">最终步：生成您看得懂的报告</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-20">
+            <h3 class="text-3xl font-bold text-center mb-10 text-[#005C97]">为您专属的核心健康功能</h3>
+            <div class="card mb-8">
+                <h4 class="text-2xl font-bold text-[#005C97] mb-4">洞察长期趋势，防患于未然</h4>
+                <p class="text-gray-600 mb-6">它最大的价值，是帮您看到那些不易察觉的、缓慢变化的健康趋势。例如，AI可能会发现您近一个月的静息心率在缓慢上升，而深度睡眠在减少。它会将这些信息关联起来，在问题变得严重之前提醒您关注，真正做到“防患于未然”。</p>
+                <div class="chart-container h-96 max-h-[50vh]">
+                    <canvas id="trendsChart"></canvas>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h4 class="text-xl font-bold text-[#005C97] mb-2">深度解读体检报告</h4>
+                    <p class="text-gray-600">不再面对复杂的化验单数据感到困惑。只需拍照上传，AI就能为您解读报告中的关键项，例如**血脂四项、血糖指标**等，并将其与您日常监测的**血压、心率**数据相结合，提供综合性的健康评估和风险提示。</p>
+                </div>
+                <div class="card">
+                    <div class="text-4xl mb-4">🌙</div>
+                    <h4 class="text-xl font-bold text-[#005C97] mb-2">深度睡眠分析</h4>
+                    <p class="text-gray-600">不只看睡了多久，更关心睡了多好。AI会分析您的睡眠阶段、呼吸质量和夜间**心率**与**血氧**，提供个性化的改善建议，助您夜夜好眠。</p>
+                </div>
+                <div class="card">
+                    <div class="text-4xl mb-4">🏃‍♀️</div>
+                    <h4 class="text-xl font-bold text-[#005C97] mb-2">私人活动教练</h4>
+                    <p class="text-gray-600">智能识别您的久坐时间，并适时提醒您起身活动。它还能记录您的运动成果，庆祝您达成的每一个小目标，让健康运动更有趣。</p>
+                </div>
+                <div class="card">
+                    <div class="text-4xl mb-4">🥗</div>
+                    <h4 class="text-xl font-bold text-[#005C97] mb-2">饮食关联分析</h4>
+                    <p class="text-gray-600">通过简单的语音或手动记录，AI能帮您分析饮食习惯与精力水平、睡眠质量之间的关系，助您找到最适合自己的健康饮食模式。</p>
                 </div>
             </div>
         </section>
         
-        <section id="swot" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">SWOT 分析</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="card p-4 rounded-lg">
-                    <h3 class="text-lg font-bold text-green-400 mb-2">💪 优势 (Strengths)</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-                        <li>专利保护的隐私架构（本地处理）</li>
-                        <li>独特的多模态数据融合AI引擎</li>
-                        <li>清晰的B2B2C商业模式对接医保</li>
-                    </ul>
-                </div>
-                <div class="card p-4 rounded-lg">
-                    <h3 class="text-lg font-bold text-red-400 mb-2">⛓️ 劣势 (Weaknesses)</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-                        <li>美国市场品牌认知度为零</li>
-                        <li>初期依赖第三方可穿戴设备</li>
-                        <li>跨境运营与供应链管理的复杂性</li>
-                    </ul>
-                </div>
-                <div class="card p-4 rounded-lg">
-                    <h3 class="text-lg font-bold text-blue-400 mb-2">✨ 机会 (Opportunities)</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-                        <li>结构性的市场顺风（老龄化、慢病）</li>
-                        <li>明确的RPM报销政策红利</li>
-                        <li>消费者对数据隐私不信任感创造机遇</li>
-                    </ul>
-                </div>
-                 <div class="card p-4 rounded-lg">
-                    <h3 class="text-lg font-bold text-yellow-400 mb-2">⚠️ 威胁 (Threats)</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-                        <li>FDA/HIPAA监管流程复杂耗时</li>
-                        <li>科技巨头进入赛道的间接竞争</li>
-                        <li>市场需要教育成本接受新模式</li>
-                    </ul>
-                </div>
+        <section id="in-the-box" class="mb-20 text-center">
+            <h3 class="text-3xl font-bold mb-10 text-[#005C97]">开箱清单</h3>
+            <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center"><div class="text-6xl p-4">🖥️</div><p class="mt-2 font-semibold">AI健康中枢主机</p></div>
+                <div class="flex flex-col items-center"><div class="text-6xl p-4">🔌</div><p class="mt-2 font-semibold">电源适配器</p></div>
+                <div class="flex flex-col items-center"><div class="text-6xl p-4">📼</div><p class="mt-2 font-semibold">高速HDMI连接线</p></div>
+                <div class="flex flex-col items-center"><div class="text-6xl p-4">📖</div><p class="mt-2 font-semibold">快速入门指南</p></div>
             </div>
         </section>
 
-        <footer class="text-center mt-12">
-            <h2 class="text-3xl font-bold text-center mb-4">最终建议：请求授权，立即行动</h2>
-            <div class="card p-6 rounded-xl max-w-3xl mx-auto">
-                <p class="text-lg text-gray-300 mb-4">“哨兵计划”是一个高战略价值、高技术壁垒、高回报潜力的项目。我们建议董事会立即批准启动第一阶段（B计划），并授权寻求$300万美元的种子轮融资，用于支撑未来24个月的关键运营和监管准备。</p>
-                <p class="font-bold text-purple-400 text-xl">是时候升起船锚，开启这段激动人心的征程了。</p>
+        <section id="specs" class="mb-16">
+            <h3 class="text-3xl font-bold text-center mb-10 text-[#005C97]">产品规格</h3>
+            <div class="card overflow-x-auto p-0 md:p-6">
+                <table class="spec-table">
+                    <tbody>
+                        <tr><th>产品型号</th><td>AI Family Health Hub v1.0</td></tr>
+                        <tr><th>核心处理器</th><td>Rockchip RK3588 (8核心 64位, 4x Cortex-A76 + 4x Cortex-A55)</td></tr>
+                        <tr><th>AI性能</th><td>6 TOPS 专用神经网络处理单元 (NPU)，支持混合精度计算</td></tr>
+                        <tr><th>内存</th><td>8GB LPDDR4 高速内存</td></tr>
+                        <tr><th>存储</th><td>64GB eMMC 高速闪存 (可通过NVMe SSD扩展)</td></tr>
+                        <tr><th>显示输出</th><td>HDMI 2.1，最高支持 8K@60Hz 超高清画质，兼容HDR</td></tr>
+                        <tr><th>接口</th><td>千兆以太网, USB 3.1 (Type-A) x2, USB-C (OTG) x1, TF卡槽</td></tr>
+                        <tr><th>无线连接</th><td>Wi-Fi 6 (802.11ax) 双频, 蓝牙 5.2 (支持BLE)</td></tr>
+                        <tr><th>支持数据源</th><td>蓝牙可穿戴设备(采集**心率、血氧**等), 智能血压计/血糖仪, 手机App(OCR识别**医院化验单如血常规、血脂报告**等，及手动录入)</td></tr>
+                        <tr><th>安全特性</th><td>纯本地化数据处理，硬件级安全启动，文件系统级加密，安全OTA更新</td></tr>
+                        <tr><th>操作系统</th><td>基于Linux深度定制的安全OS</td></tr>
+                        <tr><th>电源</th><td>12V/2A DC 输入 (通过UL认证)</td></tr>
+                        <tr><th>尺寸与重量</th><td>120mm x 120mm x 35mm, 约350克</td></tr>
+                        <tr><th>环境要求</th><td>工作温度: 0°C ~ 40°C, 存储温度: -20°C ~ 60°C</td></tr>
+                    </tbody>
+                </table>
             </div>
+        </section>
+
+        <footer class="text-center mt-16 text-gray-500">
+            <p>&copy; 2025 AI家庭健康中枢. 守护每个家庭的健康生活。</p>
         </footer>
 
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        const themeColors = {
+            primary: '#005C97',
+            negativeTrend: '#e53e3e',
+            positiveTrend: '#38a169'
+        };
 
-            const palette = {
-                purple: 'rgba(160, 81, 149, 0.8)',
-                pink: 'rgba(212, 80, 135, 0.8)',
-                red: 'rgba(249, 93, 106, 0.8)',
-                orange: 'rgba(255, 124, 67, 0.8)',
-                yellow: 'rgba(255, 166, 0, 0.8)',
-                grid: 'rgba(255, 255, 255, 0.2)',
-                text: '#E5E7EB'
-            };
-
-            const processLabels = (labels) => {
-                return labels.map(label => {
-                    if (typeof label === 'string' && label.length > 16) {
-                        const words = label.split(' ');
-                        const lines = [];
-                        let currentLine = '';
-                        words.forEach(word => {
-                            if ((currentLine + ' ' + word).trim().length > 16) {
-                                lines.push(currentLine.trim());
-                                currentLine = word;
-                            } else {
-                                currentLine = (currentLine + ' ' + word).trim();
-                            }
-                        });
-                        if (currentLine) {
-                            lines.push(currentLine.trim());
-                        }
-                        return lines;
-                    }
-                    return label;
-                });
-            };
-
-            const tooltipTitleCallback = (tooltipItems) => {
-                const item = tooltipItems[0];
-                let label = item.chart.data.labels[item.dataIndex];
-                if (Array.isArray(label)) {
-                    return label.join(' ');
-                }
-                return label;
-            };
-            
-            const defaultChartOptions = {
-                maintainAspectRatio: false,
-                responsive: true,
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: palette.text
+        const chartTooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(label) ? label.join(' ') : label;
                         }
                     },
-                    tooltip: {
-                        callbacks: {
-                            title: tooltipTitleCallback
-                        }
-                    }
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleFont: { size: 14 },
+                    bodyFont: { size: 12 },
+                    padding: 10,
+                    cornerRadius: 4
                 },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: { color: palette.grid },
-                        ticks: { color: palette.text }
-                    },
-                    x: {
-                        grid: { color: palette.grid },
-                        ticks: { color: palette.text }
+                legend: {
+                    labels: {
+                        color: '#334155',
+                        font: { size: 12 }
                     }
                 }
+            }
+        };
+        
+        function createTrendsChart() {
+            const ctx = document.getElementById('trendsChart').getContext('2d');
+            if (!ctx) return;
+            const labels = Array.from({length: 12}, (_, i) => `第 ${i + 1} 周`);
+            const data = {
+                labels: labels,
+                datasets: [
+                    {
+                        label: '平均静息心率 (次/分)',
+                        data: [62, 63, 62, 64, 63, 65, 66, 65, 67, 68, 67, 69],
+                        borderColor: themeColors.negativeTrend,
+                        backgroundColor: 'rgba(229, 62, 62, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: '平均深度睡眠时长 (分钟)',
+                        data: [95, 92, 93, 88, 90, 85, 86, 82, 84, 80, 78, 75],
+                        borderColor: themeColors.positiveTrend,
+                        backgroundColor: 'rgba(56, 161, 105, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        yAxisID: 'y1'
+                    }
+                ]
             };
-
-            const revenueChartCtx = document.getElementById('revenueChart').getContext('2d');
-            new Chart(revenueChartCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['第一年', '第二年', '第三年', '第四年', '第五年'],
-                    datasets: [{
-                        label: '年收入 (千美元)',
-                        data: [199, 615, 469, 1891, 6283],
-                        backgroundColor: [palette.purple, palette.pink, palette.red, palette.orange, palette.yellow],
-                        borderColor: [palette.purple, palette.pink, palette.red, palette.orange, palette.yellow],
-                        borderWidth: 1
-                    }]
-                },
-                options: defaultChartOptions
-            });
-            
-            const clinicRoiChartCtx = document.getElementById('clinicRoiChart').getContext('2d');
-            new Chart(clinicRoiChartCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['年净利润', 'AI BOX服务费', '额外人力成本'],
-                    datasets: [{
-                        label: '诊所ROI (美元)',
-                        data: [75600, 39600, 16800],
-                        backgroundColor: [
-                            palette.yellow,
-                            palette.orange,
-                            palette.red
-                        ],
-                        hoverOffset: 4
-                    }]
-                },
+            new Chart(ctx, {
+                type: 'line',
+                data: data,
                 options: {
-                    maintainAspectRatio: false,
+                    ...chartTooltipConfig,
                     responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    stacked: false,
                     plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                color: palette.text,
-                                boxWidth: 12
-                            }
+                        ...chartTooltipConfig.plugins,
+                        title: { display: true, text: '示例：AI识别的12周健康趋势变化', font: { size: 16, weight: 'bold' } },
+                    },
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: { display: true, text: '心率 (次/分)', color: themeColors.negativeTrend },
+                            grid: { drawOnChartArea: false },
                         },
-                        tooltip: {
-                            callbacks: {
-                                title: tooltipTitleCallback
-                            }
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: { display: true, text: '睡眠 (分钟)', color: themeColors.positiveTrend },
+                            grid: { drawOnChartArea: false }
                         }
                     }
                 }
             });
-        });
-    </script>
+        }
 
+        window.onload = function() {
+            createTrendsChart();
+        };
+    </script>
 </body>
 </html>
